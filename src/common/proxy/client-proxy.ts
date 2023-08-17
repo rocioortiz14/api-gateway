@@ -4,7 +4,7 @@ import { ClientProxy, ClientProxyFactory,Transport } from '@nestjs/microservices
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class ClientProxySuperFlighta {
+export class ClientProxySuperFlights {
   constructor(private readonly config: ConfigService) {}
 
   clientProxyUsers(): ClientProxy {
