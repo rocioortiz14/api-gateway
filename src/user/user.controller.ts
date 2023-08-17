@@ -24,7 +24,7 @@ export class UserController {
 
     @Get(':id')
     findOne(@Param('id') id: string): Observable<IUser> {
-        return this._clientProxyUser.send(UserMSG.FIND_ONE, '');
+        return this._clientProxyUser.send(UserMSG.FIND_ONE, id);
     }
 
     @Put(':id')
