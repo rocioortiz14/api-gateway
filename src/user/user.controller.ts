@@ -6,7 +6,9 @@ import { ClientProxySuperFlights } from 'src/common/proxy/client-proxy';
 import { UserDTO } from './dto/user.dto';
 import { Observable } from 'rxjs/internal/Observable';
 import { UserMSG } from 'src/common/constants';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('users')
 @Controller('api/v2/user')
 export class UserController {
     constructor(private readonly clientProxy: ClientProxySuperFlights) {}

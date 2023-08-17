@@ -6,8 +6,9 @@ import { IFlight } from 'src/common/interfaces/flight.interface';
 import { ClientProxySuperFlights } from 'src/common/proxy/client-proxy';
 import { FlightDTO } from './dto/flight.dto';
 import { FlightMSG, PassengerMSG } from 'src/common/constants';
-import { ApiOperation } from '@nestjs/swagger';
+import { ApiOperation, ApiTags } from '@nestjs/swagger';
 
+@ApiTags('flights')
 @Controller('api/v2/flight')
 export class FlightController {
 constructor(private readonly clientProxy: ClientProxySuperFlights) {}
